@@ -1,0 +1,25 @@
+{
+  "name": "cfx.example-umi-user-dashboard.Page",
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "rm -rf .storybook public src"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.3.14",
+    "@storybook/addon-options": "^3.3.14",
+    "@storybook/react": "^3.3.14",
+    "cfx.simple-build-tool": "^0.0.12",
+    "ddeyes": "^0.0.6"
+  },
+  "dependencies": {
+    "antd": "^3.2.3",
+    "cfx.example-umi-user-dashboard.Sdk": "^0.0.0",
+    "cfx.example-umi-user-dashboard.View": "^0.0.0",
+    "cfx.dom": "^0.0.3",
+    "cfx.react-redux": "^0.0.4",
+    "normalize.css": "^8.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reset-css": "^2.2.1"
+  }
+}
