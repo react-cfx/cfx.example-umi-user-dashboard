@@ -2,6 +2,7 @@
   "name": "cfx.example-dva-user-dashboard.SDK",
   "version": "0.0.0",
   "main": "dist/bundle.js",
+  "private": true,
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
