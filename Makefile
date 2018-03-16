@@ -18,3 +18,14 @@ in:
 		-ti \
 		${pjName} \
 		/bin/bash
+
+start:
+	docker run \
+		--name ${pjName} \
+		--restart always \
+		-d \
+		-p 3030:3000 \
+		-v $$(pwd):/root/${pjName} \
+		mooxe/node \
+		/bin/bash -lc \
+			"cd /root/${pjName}/packages/Umi && make start"
