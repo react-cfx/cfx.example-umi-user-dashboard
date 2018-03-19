@@ -1,4 +1,9 @@
 {
+	"scripts": {
+		"lernaclean": "npx lerna clean --yes",
+		"lernabootstrap": "npx lerna bootstrap",
+		"rebootstrap": "npm run lernaclean; npm run lernabootstrap"
+	},
 	"devDependencies": {
 		"lerna": "^2.9.0"
 	}
