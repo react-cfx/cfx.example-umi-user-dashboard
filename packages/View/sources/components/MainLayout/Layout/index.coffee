@@ -1,18 +1,19 @@
-import Header from '../Header'
 import nb from './style'
 
-import { prefixDom } from 'cfx.dom'
+import prefixDom from '../../../utils/cfx'
 
 CFX = prefixDom {
   'div'
-  Header
 }
 
-MainLayout = ({
+MainLayout = (Header) => ({
   location
   children
-  HeaderLink
 }) ->
+
+  CFX = CFX.extends {
+    Header
+  }
 
   {
     c_div
@@ -25,7 +26,6 @@ MainLayout = ({
   ,
     c_Header {
       location
-      Link: HeaderLink
     }
     c_div {
       ( nb 'content' )...

@@ -1,32 +1,31 @@
 import { prefixDom } from 'cfx.dom'
-import MainLayout from '../../components/MainLayout';
-import Page from './page'
+import nb from './style'
+import Users from '../../components/Users'
+
+CFX = prefixDom {
+  'div'
+  Users
+}
 
 export default ({
-  location
-  HeaderLink
-  Users
-}) ->
-
-  CFX = prefixDom {
-    'div'
-    MainLayout
-    Users
-  }
+  list
+  total
+  current
+  pageSize = 3
+}) =>
 
   {
-    c_MainLayout
+    c_div  
     c_Users
-    c_div
   } = CFX
 
-  c_MainLayout {
-    location
-    HeaderLink
+  c_div {
+    ( nb 'normal' )...
   }
   ,
-    c_Users {}
-
-export {
-  Page
-}
+    c_Users {
+      list
+      total
+      current
+      pageSize
+    }

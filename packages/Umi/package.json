@@ -9,8 +9,8 @@
     "umi": "^1.0.5"
   },
   "dependencies": {
-    "cfx.example-umi-user-dashboard.Sdk": "^0.0.0",
-    "cfx.example-umi-user-dashboard.View": "^0.0.0",
+    "cfx.example-umi-user-dashboard.Sdk": "file:../Sdk",
+    "cfx.example-umi-user-dashboard.View": "file:../View",
     "antd": "^3.3.0",
     "cfx.dom": "^0.0.3",
     "cfx.react-redux": "^0.0.4"

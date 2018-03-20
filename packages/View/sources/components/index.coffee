@@ -10,12 +10,13 @@ import MainLayout, {
 
 export {
   MainLayout
-
   Header
-
   Users
-
-  UserForm
-  UsersTable
-  UserModal
 }
+
+export default
+  Users: {
+    UserForm
+    UsersTable
+    UserModal
+  }

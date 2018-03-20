@@ -1,29 +1,52 @@
 import { prefixDom } from 'cfx.dom'
-import MainLayout from '../../components/MainLayout'
-import Page from './page'
+import nb from './style'
 
 CFX = prefixDom {
-  MainLayout
-  Page
+  'div'
+  'h1'
+  'ul'
+  'li'
+  'code'
+  'a'
 }
 
-export default ({
-  location
-  HeaderLink
-}) ->
+export default =>
 
   {
-    c_MainLayout
-    c_Page
+    c_div
+    c_h1
+    c_ul
+    c_li
+    c_code
+    c_a
   } = CFX
 
-  c_MainLayout {
-    location
-    HeaderLink
+  c_div {
+    ( nb 'normal' )...
   }
   ,
-    c_Page {}
+    c_h1 {
+      ( nb 'title' )...
+    }
+    , 'Yay! Welcome to dva!'
 
-export {
-  Page
-}
+    c_div {
+      ( nb 'welcome' )...
+    }
+
+    c_ul {
+      ( nb 'list' )...
+    }
+    ,
+      c_li {}
+      , 'To get started, edit'
+      ,
+        c_code {}
+        , 'src/index.js'
+      , ' and save to reload.'
+
+      c_li {}
+      ,
+        c_a
+          href: 'https://github.com/dvajs/dva'
+        , 'Getting Started'

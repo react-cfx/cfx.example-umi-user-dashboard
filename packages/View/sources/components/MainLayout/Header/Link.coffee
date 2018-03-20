@@ -1,31 +1,9 @@
-# import { ddbs as dd } from 'ddeyes'
-import { prefixDom } from 'cfx.dom'
+import getLink from '../../../utils/Link'
 
-CFX = prefixDom {
-  'a'
-}
+export default (Link) =>
 
-HocA = (link) => ({
-  children
-}) =>
-  { c_a } = CFX
-  c_a
-    href: link
-  , children
-
-export default (
-  Link
-  DefaultConf
-) =>
-
-  (
-    Object.keys DefaultConf
-  ).reduce (r, c, i, a) =>
-    {
-      r...
-      "#{c}":
-        if Link?[c]?
-        then Link[c]
-        else HocA a[c]
-    }
-  , {}
+  getLink Link
+  ,
+    Index: '/'
+    Users: '/users'
+    Fof: '/404'

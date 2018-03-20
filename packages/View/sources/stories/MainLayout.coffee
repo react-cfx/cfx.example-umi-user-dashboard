@@ -5,9 +5,8 @@ import MainLayout, { Header } from '../components/MainLayout'
 
 CFX = prefixDom {
   'h1'
-
-  Header
-  MainLayout
+  Header: Header()
+  MainLayout: MainLayout Header()
 }
 
 export default ->

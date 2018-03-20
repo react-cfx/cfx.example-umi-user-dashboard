@@ -1,9 +1,9 @@
 # import { ddbs as dd } from 'ddeyes'
 
-import { prefixDom } from 'cfx.dom'
+import prefixDom from '../../../utils/cfx'
 import { Menu, Icon } from 'antd'
-MenuItem = Menu.Item
 import getLink from './Link'
+MenuItem = Menu.Item
 
 CFX = prefixDom {
   'a'
@@ -12,35 +12,21 @@ CFX = prefixDom {
   Icon
 }
 
-export default ({
+export default (Link) => ({
   location
-  Link
 }) ->
 
-  Link = getLink Link
-  ,
-    Index: '/'
-    Users: '/users'
-    Fof: '/404'
-
-  CFX = {
-    CFX...
-    (
-      prefixDom
-        LinkUsers: Link.Users
-        LinkIndex: Link.Index
-        LinkFof: Link.Fof
-    )...
-  }
+  CFX = CFX.extends getLink Link
 
   {
     c_a
     c_Menu
     c_MenuItem
     c_Icon
-    c_LinkUsers
-    c_LinkIndex
-    c_LinkFof
+
+    c_Index
+    c_Users
+    c_Fof
   } = CFX
 
   c_Menu {
@@ -55,7 +41,7 @@ export default ({
     c_MenuItem
       key: '/'
     ,
-      c_LinkIndex {}
+      c_Index {}
       ,
         c_Icon type: 'home'
       , 'Home'
@@ -63,7 +49,7 @@ export default ({
     c_MenuItem
       key: '/users'
     ,
-      c_LinkUsers {}
+      c_Users {}
       ,
         c_Icon type: 'bars'
       , 'Users'
@@ -89,7 +75,7 @@ export default ({
     c_MenuItem
       key: '/404'
     ,
-      c_LinkFof {}
+      c_Fof {}
       ,
         c_Icon type: 'frown-circle'
       , '404'
