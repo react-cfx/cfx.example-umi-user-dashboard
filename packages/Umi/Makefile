@@ -7,3 +7,6 @@ dev:
 
 static:
 	env COMPRESS=none umi build
+
+serve:
+	serve -p 8000 ./dist/

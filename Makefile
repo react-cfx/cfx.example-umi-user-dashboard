@@ -19,13 +19,29 @@ in:
 		${pjName} \
 		/bin/bash
 
-start:
+dev:
 	docker run \
 		--name ${pjName} \
 		--restart always \
 		-d \
-		-p 3030:3000 \
+		-p 3000:8000 \
 		-v $$(pwd):/root/${pjName} \
 		mooxe/node \
 		/bin/bash -lc \
-			"cd /root/${pjName}/packages/Umi && make start"
+			"cd /root/${pjName}/packages/Umi && make static && make serve"
+
+prd:
+	docker run \
+		--name ${pjName} \
+		--restart always \
+		-d \
+		-p 80:80 \
+		-v $$(pwd):/srv \
+		-v $$(pwd)/packages/Umi/Caddyfile:/etc/Caddyfile \
+		productionwentdown/caddy
+
+stop:
+	docker rm -f ${pjName}
+
+logs:
+	docker logs -f ${pjName}
