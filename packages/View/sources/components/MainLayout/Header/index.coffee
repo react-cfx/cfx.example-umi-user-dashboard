@@ -1,9 +1,11 @@
 # import { ddbs as dd } from 'ddeyes'
 
+import { Component } from 'react'
 import prefixDom from '../../../utils/cfx'
 import { Menu, Icon } from 'antd'
-import getLink from './Link'
 MenuItem = Menu.Item
+
+import getLinks from '../../../utils/Link'
 
 CFX = prefixDom {
   'a'
@@ -14,9 +16,14 @@ CFX = prefixDom {
 
 export default (Link) => ({
   location
-}) ->
-
-  CFX = CFX.extends getLink Link
+}) =>
+  CFX = CFX.extends (
+    getLinks Link
+    ,
+      Home: '/'
+      Users: '/users'
+      Fof: '/404'
+  )
 
   {
     c_a
@@ -24,16 +31,16 @@ export default (Link) => ({
     c_MenuItem
     c_Icon
 
-    c_Index
+    c_Home
     c_Users
     c_Fof
   } = CFX
 
   c_Menu {
     selectedKeys:
-      unless location?
-      then [ '/' ]
-      else [ location.pathname ]
+      if location?.pathname?
+      then [ location.pathname ]
+      else [ '/' ]
     mode: 'horizontal'
     theme: 'dark'
   }
@@ -41,7 +48,7 @@ export default (Link) => ({
     c_MenuItem
       key: '/'
     ,
-      c_Index {}
+      c_Home {}
       ,
         c_Icon type: 'home'
       , 'Home'

@@ -1,31 +1,130 @@
 # import { ddbs as dd } from 'ddeyes'
-import { prefixDom } from 'cfx.dom'
+import prefixDom from './cfx'
 
-CFX = prefixDom {
-  'a'
-}
+CFX = prefixDom { 'a' }
 
-HocA = (link) => ({
+aHerf = (
+  {
+    key
+    where
+  }
+  propsFunc = => {}
+) => ({
   children
 }) =>
+
   { c_a } = CFX
-  c_a
-    href: link
+  props = propsFunc key
+
+  c_a {
+    props...
+    key
+    href: where
+  }
   , children
 
-export default (
-  Link
-  DefaultConf
+aClick = (linkTo) => (
+  {
+    key
+    where
+  }
+  propsFunc = => {}
+) => ({
+  children
+}) =>
+
+  { c_a } = CFX
+  _props = propsFunc key
+
+  {
+    action
+    props...
+  } = _props
+
+  onClick = =>
+
+    action key if action? and (
+      typeof action is 'function'
+    )
+
+    if Array.isArray where
+    then linkTo.apply null, where
+    else linkTo where
+
+  c_a {
+    props...
+    key
+    href: "javascript: void(0);"
+    onClick: onClick()
+  }
+  , children
+
+linkDom = (Link) => (
+  {
+    key
+    where
+  }
+  propsFunc = => {}
+) => ({
+  children
+}) =>
+
+  CFX = CFX.extends { Link }
+  { c_Link } = CFX
+  props = propsFunc key
+
+  c_Link {
+    props...
+    key
+    where...
+  }
+  , children
+
+getLinks = (
+  routers
+  {
+    story
+    umi
+  }
+  propsFunc = => {}
 ) =>
 
+  Link =
+    if story?
+      aClick story
+    else if umi?
+      (where) =>
+        ( linkDom umi )
+          to: where
+    else aHerf
+
   (
-    Object.keys DefaultConf
-  ).reduce (r, c, i, a) =>
+    Object.keys routers
+  ).reduce (r, c) =>
     {
       r...
       "#{c}":
-        if Link?[c]?
-        then Link[c]
-        else HocA a[c]
+        Link
+          key: c
+          where: routers[c]
+        , propsFunc
     }
   , {}
+
+export default (
+  Links
+  defaultRouters
+  defaultPropsFunc = =>
+) =>
+
+  if Links?
+  then Links
+  else (
+    getLinks defaultRouters
+    , {}
+    , defaultPropsFunc
+  )
+
+export {
+  getLinks
+}
