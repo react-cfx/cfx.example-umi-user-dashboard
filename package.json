@@ -2,6 +2,7 @@
 	"scripts": {
 		"lernaclean": "npx lerna clean --yes",
 		"lernabootstrap": "npx lerna bootstrap",
+		"lernabootstrapWithoutScripts": "npx lerna bootstrap --ignore-scripts",
 		"rebootstrap": "npm run lernaclean; npm run lernabootstrap"
 	},
 	"devDependencies": {

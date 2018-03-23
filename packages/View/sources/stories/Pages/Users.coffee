@@ -1,9 +1,9 @@
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 import {
   Users
 } from '../../pages'
 
-CFX = prefixDom {
+CFX = cfxify {
   Users
 }
 

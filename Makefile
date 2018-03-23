@@ -28,7 +28,7 @@ dev:
 		-v $$(pwd):/root/${pjName} \
 		mooxe/node \
 		/bin/bash -lc \
-			"cd /root/${pjName}/packages/Umi && make static && make serve"
+			"cd /root/${pjName}/packages/Umi && make rebuild && make static && make serve"
 
 prd:
 	docker run \

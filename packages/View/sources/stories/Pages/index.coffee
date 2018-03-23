@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 
 import MainLayout, { Header } from '../../components/MainLayout'
 import Link from './Link'
@@ -10,7 +10,7 @@ import {
 
 import UsersPage from './Users'
 
-CFX = prefixDom {
+CFX = cfxify {
   HomePage
   UsersPage
   Header: Header Link

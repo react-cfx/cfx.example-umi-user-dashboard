@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Modal } from 'antd'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 import Form from './Form'
 
-CFX = prefixDom {
+CFX = cfxify {
   'span'
 
   Modal

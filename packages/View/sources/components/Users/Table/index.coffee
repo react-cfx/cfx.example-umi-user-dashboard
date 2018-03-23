@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 
 import { Table, Popconfirm } from 'antd'
 
@@ -7,7 +7,7 @@ import UserModal from '../Modal'
 
 import nb from './style'
 
-CFX = prefixDom {
+CFX = cfxify {
   'a'
   'span'
 

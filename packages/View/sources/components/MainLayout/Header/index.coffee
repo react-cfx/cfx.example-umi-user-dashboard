@@ -1,13 +1,13 @@
 # import { ddbs as dd } from 'ddeyes'
 
 import { Component } from 'react'
-import prefixDom from '../../../utils/cfx'
+import cfxify from 'cfx.dom'
 import { Menu, Icon } from 'antd'
 MenuItem = Menu.Item
 
 import getLinks from '../../../utils/Link'
 
-CFX = prefixDom {
+CFX = cfxify {
   'a'
   Menu
   MenuItem
@@ -17,7 +17,8 @@ CFX = prefixDom {
 export default (Link) => ({
   location
 }) =>
-  CFX = CFX.extends (
+
+  CFX = CFX._.extends (
     getLinks Link
     ,
       Home: '/'

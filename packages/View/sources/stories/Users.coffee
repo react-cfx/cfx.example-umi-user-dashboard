@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 import { Button } from 'antd'
 
 import Users, {
@@ -8,7 +8,7 @@ import Users, {
   UsersTable
 } from '../components/Users'
 
-CFX = prefixDom {
+CFX = cfxify {
   Button
 
   UserForm

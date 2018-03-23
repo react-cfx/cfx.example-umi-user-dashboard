@@ -1,8 +1,7 @@
 import nb from './style'
+import cfxify from 'cfx.dom'
 
-import prefixDom from '../../../utils/cfx'
-
-CFX = prefixDom {
+CFX = cfxify {
   'div'
 }
 
@@ -11,7 +10,7 @@ MainLayout = (Header) => ({
   children
 }) ->
 
-  CFX = CFX.extends {
+  CFX = CFX._.extends {
     Header
   }
 

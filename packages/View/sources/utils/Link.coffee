@@ -1,7 +1,7 @@
 # import { ddbs as dd } from 'ddeyes'
-import prefixDom from './cfx'
+import cfxify from 'cfx.dom'
 
-CFX = prefixDom { 'a' }
+CFX = cfxify { 'a' }
 
 aHerf = (
   {

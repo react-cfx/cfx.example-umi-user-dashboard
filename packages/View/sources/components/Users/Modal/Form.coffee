@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, Input } from 'antd'
 FormItem = Form.Item
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 
-CFX = prefixDom {
+CFX = cfxify {
   Form
   FormItem
   Input

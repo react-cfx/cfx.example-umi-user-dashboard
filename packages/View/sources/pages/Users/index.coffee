@@ -1,8 +1,8 @@
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.dom'
 import nb from './style'
 import Users from '../../components/Users'
 
-CFX = prefixDom {
+CFX = cfxify {
   'div'
   Users
 }
