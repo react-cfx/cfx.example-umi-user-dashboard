@@ -85,6 +85,7 @@ getLinks = (
   {
     story
     umi
+    custom
   }
   propsFunc = => {}
 ) =>
@@ -96,11 +97,15 @@ getLinks = (
       (where) =>
         ( linkDom umi )
           to: where
+    else if custom?
+      (where) =>
+        ( linkDom custom ) {
+          where
+        }
     else aHerf
 
-  (
-    Object.keys routers
-  ).reduce (r, c) =>
+  Object.keys routers
+  .reduce (r, c) =>
     {
       r...
       "#{c}":

@@ -7,18 +7,21 @@
     "build": "rollup -c",
     "rebuild": "npm run clean; npm run build",
     "postinstall": "npm run build"
-  },
-	"dependencies": {
+	},
+	"devDependencies": {
 		"@storybook/addon-info": "^3.3.11",
 		"@storybook/addon-links": "^3.3.11",
 		"@storybook/addon-options": "^3.3.11",
 		"@storybook/react": "^3.3.11",
+		"ddeyes": "^0.0.6"
+	},
+	"dependencies": {
 		"antd": "^3.1.6",
 		"cfx.dom": "^0.1.0",
+		"cfx.link": "^0.0.1",
 		"cfx.rollup-plugin-coffee2": "^0.1.4",
 		"cfx.simple-build-tool": "^0.0.12",
 		"cfx.style": "^0.0.4",
-		"ddeyes": "^0.0.6",
 		"normalize.css": "^7.0.0",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",

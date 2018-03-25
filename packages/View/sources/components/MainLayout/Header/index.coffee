@@ -5,7 +5,7 @@ import cfxify from 'cfx.dom'
 import { Menu, Icon } from 'antd'
 MenuItem = Menu.Item
 
-import getLinks from '../../../utils/Link'
+import getLinks from 'cfx.link'
 
 CFX = cfxify {
   'a'

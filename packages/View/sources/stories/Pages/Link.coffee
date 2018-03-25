@@ -1,6 +1,6 @@
 import { linkTo } from '@storybook/addon-links'
 # import LinkTo from '@storybook/addon-links/react'
-import { getLinks } from '../../utils/Link'
+import { getLinks } from 'cfx.link'
 
 export default getLinks
   Home: [
