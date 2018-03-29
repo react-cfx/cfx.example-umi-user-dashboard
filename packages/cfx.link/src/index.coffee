@@ -94,14 +94,21 @@ getLinks = (
     if story?
       aClick story
     else if umi?
-      (where) =>
-        ( linkDom umi )
-          to: where
-    else if custom?
-      (where) =>
-        ( linkDom custom ) {
+      (
+        {
+          key
           where
         }
+        propsFunc
+      ) =>
+        ( linkDom umi ) {
+          key
+          where:
+            to: where
+        }
+        , propsFunc
+    else if custom?
+      linkDom custom
     else aHerf
 
   Object.keys routers
