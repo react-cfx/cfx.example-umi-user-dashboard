@@ -69,7 +69,7 @@ linkDom = (Link) => (
   children
 }) =>
 
-  CFX = CFX.extends { Link }
+  CFX = CFX._.extends { Link }
   { c_Link } = CFX
   props = propsFunc key
 

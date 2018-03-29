@@ -18,7 +18,7 @@
 	"dependencies": {
 		"antd": "^3.1.6",
 		"cfx.dom": "^0.1.0",
-		"cfx.link": "^0.0.1",
+		"cfx.link": "^0.0.2",
 		"cfx.rollup-plugin-coffee2": "^0.1.4",
 		"cfx.simple-build-tool": "^0.0.12",
 		"cfx.style": "^0.0.4",
