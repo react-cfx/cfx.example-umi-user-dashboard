@@ -55,7 +55,7 @@ aClick = (linkTo) => (
     props...
     key
     href: "javascript: void(0);"
-    onClick: onClick()
+    onClick
   }
   , children
 
