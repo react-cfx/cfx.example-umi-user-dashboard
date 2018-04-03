@@ -43,13 +43,18 @@ aClick = (linkTo) => (
 
   onClick = =>
 
-    action key if action? and (
+    await action key if action? and (
       typeof action is 'function'
     )
 
-    if Array.isArray where
-    then linkTo.apply null, where
-    else linkTo where
+    rLinkTo =
+      if Array.isArray where
+      then linkTo.apply null, where
+      else linkTo where
+
+    if ( typeof rLinkTo ) is 'function'
+    then do rLinkTo
+    else rLinkTo
 
   c_a {
     props...
