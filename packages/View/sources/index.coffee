@@ -2,12 +2,12 @@ import {
   MainLayout
   Header
   Users as UsersComp
-} from './components'
+} from './components/comps'
 
 import {
   Home
   Users
-} from './pages'
+} from './components/pages'
 
 Comps = {
   MainLayout

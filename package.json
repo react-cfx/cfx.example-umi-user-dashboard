@@ -1,11 +1,18 @@
 {
 	"scripts": {
-		"lernaclean": "npx lerna clean --yes",
-		"lernabootstrap": "npx lerna bootstrap",
-		"lernabootstrapWithoutScripts": "npx lerna bootstrap --ignore-scripts",
-		"rebootstrap": "npm run lernaclean; npm run lernabootstrap"
+		"lernaclean": "lerna clean --yes",
+		"lernabootstrap": "lerna bootstrap",
+		"rebootstrap": "npm run lernaclean; npm run lernabootstrap",
+		"cleanall": "lerna run clean; lerna exec -- rm -rf ./dist ./yarn*; npm run lernaclean",
+		"rebootall": "npm run cleanall; npm run lernabootstrap",
+		"autod": "autod"
 	},
-	"devDependencies": {
-		"lerna": "^2.9.0"
-	}
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "cfx.require-plugin-coffee": "^0.2.6",
+    "lerna": "^2.11.0"
+  },
+  "dependencies": {
+    "lerna": "^2.11.0"
+  }
 }
