@@ -1,7 +1,7 @@
 # import dd from 'ddeyes'
 
-import { toSaga } from 'cfx.redux'
-import { sagaEffects } from 'cfx.redux-saga'
+import { toSaga } from 'cfx.redux.redux'
+import { sagaEffects } from 'cfx.redux.sagas'
 { select } = sagaEffects
 
 import services from '../services'

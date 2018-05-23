@@ -1,6 +1,6 @@
 # import { ddbs as dd } from 'ddeyes'
 import React, { Component } from 'react'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 
 import {
   connect
@@ -9,10 +9,11 @@ import {
 { actions } = app._
 
 import { Pages } from 'cfx.example-umi-user-dashboard.View'
-{ UsersPage } = Pages
+# dd Pages
+{ Users } = Pages
 
-CFX = prefixDom {
-  UsersPage
+CFX = cfxify {
+  Users
 }
 
 import {
@@ -54,8 +55,8 @@ class StoryUsers extends Component
       current
     } = @state
 
-    { c_UsersPage } = CFX
-    c_UsersPage {
+    { c_Users } = CFX
+    c_Users {
       list
       total
       current

@@ -1,7 +1,7 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
 
-import { createApp } from 'cfx.redux'
+import { createApp } from 'cfx.redux.redux'
 
 import app from '../../src'
 

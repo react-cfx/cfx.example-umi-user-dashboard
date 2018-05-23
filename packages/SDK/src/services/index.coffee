@@ -1,4 +1,4 @@
-# import dd from 'ddeyes'
+import dd from 'ddeyes'
 import getService from 'cfx.service'
 PAGE_SIZE = 3
 
@@ -19,7 +19,7 @@ business =
     }) => ({
       page
     }) =>
-      request "#{baseUrl}/users?_page=#{page}&_limit=#{PAGE_SIZE}"
+      request "#{baseUrl}?_page=#{page}&_limit=#{PAGE_SIZE}"
       ,
         method: 'GET'
 
@@ -29,7 +29,7 @@ business =
     }) => ({
       id
     }) =>
-      request "#{baseUrl}/users/#{id}"
+      request "#{baseUrl}/#{id}"
       ,
         method: 'DELETE'
 
@@ -40,7 +40,7 @@ business =
       id
       data
     }) =>
-      request "#{baseUrl}/users/#{id}"
+      request "#{baseUrl}/#{id}"
       ,
         method: 'PATCH'
         data: JSON.stringify data
@@ -51,7 +51,7 @@ business =
     }) => ({
       data
     }) =>
-      request "#{baseUrl}/users"
+      request "#{baseUrl}"
       ,
         method: 'POST'
         data: JSON.stringify data

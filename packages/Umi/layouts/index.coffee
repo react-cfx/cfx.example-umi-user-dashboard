@@ -1,16 +1,14 @@
 ### eslint-disable import/first ###
 # import { ddbs as dd } from 'ddeyes'
 
-import { prefixDom } from 'cfx.dom'
-import { Comps } from '../deps/View'
-{ MainLayout } = Comps
+import cfxify from 'cfx.react.dom'
+import { MainLayout } from '../deps/Page'
 
 import {
   app
   Provider
 } from '../store'
 { store } = app
-
 import withRouter from 'umi/withRouter'
 
 import 'antd/dist/antd.css'
@@ -21,8 +19,7 @@ import {
   Fof as LinkFof
 } from './Link'
 
-CFX = prefixDom {
-  # 'div'
+CFX = cfxify {
   Provider
   MainLayout
 }
@@ -31,19 +28,12 @@ export default withRouter ({
   location
   children
 }) =>
-
   {
-    # c_div
     c_Provider
     c_MainLayout
   } = CFX
-
-  # if location.pathname is '/404'
-  #   return (
-  #     c_div {}
-  #     , children
-  #   )
-
+  console.log location
+  console.log children
   c_Provider {
     store
   }

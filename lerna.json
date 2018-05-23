@@ -5,10 +5,6 @@
   "commands": {
     "bootstrap": {
       "ignore": [
-        "*.Next",
-        "*.Page",
-        "*.Sdk",
-        "*.Umi"
       ]
     }
   },

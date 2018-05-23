@@ -1,13 +1,13 @@
-import { prefixDom } from 'cfx.dom'
+import dd from 'ddeyes'
+import cfxify from 'cfx.react.dom'
 
 import { Pages } from 'cfx.example-umi-user-dashboard.View'
 {
   Users
 } = Pages
 
-import UsersComp from '../../pages/Users'
-
-CFX = prefixDom {
+import UsersComp from '../Pages/Users'
+CFX = cfxify {
   Users
   UsersComp
 }
@@ -20,5 +20,5 @@ export default ({
 
   c_Users {
     Users: UsersComp
-    HeaderLink
+    # HeaderLink
   }

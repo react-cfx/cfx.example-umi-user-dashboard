@@ -1,7 +1,5 @@
-import cfxify from 'cfx.dom'
-import {
-  Users
-} from '../../pages'
+import cfxify from 'cfx.react.dom'
+import Users from '../../pages'
 
 CFX = cfxify {
   Users

@@ -1,6 +1,6 @@
 # import dd from 'ddeyes'
 
-import { toReducer } from 'cfx.redux'
+import { toReducer } from 'cfx.redux.redux'
 import initStates from './initStates'
 
 export default

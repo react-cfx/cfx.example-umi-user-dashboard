@@ -1,12 +1,10 @@
 import { storiesOf } from '@storybook/react'
-import cfxify from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 
-import MainLayout, { Header } from '../../components/MainLayout'
+import MainLayout, { Header } from '../../components/comps/MainLayout'
 import Link from './Link'
 
-import {
-  Home as HomePage
-} from '../../pages'
+import HomePage from '../../pages'
 
 import UsersPage from './Users'
 

@@ -26,4 +26,5 @@ public
 src
 
 lerna-debug.log
+package-lock.json
 package.json.lerna_backup

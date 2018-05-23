@@ -1,6 +1,6 @@
 import cfxify from 'cfx.react.dom'
 import nb from './style'
-import Users from '../../components/Users'
+import Users from '../../../components/comps/Users'
 
 CFX = cfxify {
   'div'

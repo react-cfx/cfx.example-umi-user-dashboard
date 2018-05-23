@@ -1,8 +1,8 @@
 ### eslint-disable import/first ###
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 import { Component } from 'react'
 
-import { Pages } from '../../deps/View'
+import { Pages } from '../../deps/Page'
 { UsersPage } = Pages
 
 import {
@@ -15,7 +15,7 @@ import {
   getState
 } from './common'
 
-CFX = prefixDom {
+CFX = cfxify {
   UsersPage
 }
 

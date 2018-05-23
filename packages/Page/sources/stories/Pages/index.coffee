@@ -1,6 +1,6 @@
-# import { ddbs as dd } from 'ddeyes'
+# import dd from 'ddeyes'
 import { storiesOf } from '@storybook/react'
-import { prefixDom } from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 import {
   Provider
   app
@@ -12,15 +12,11 @@ import { Pages } from 'cfx.example-umi-user-dashboard.View'
 
 import Users from './Users'
 
-import {
-  stories
-} from 'cfx.example-umi-user-dashboard.View/dist/stories'
+# LinkUsers = stories.HeaderLink.Users
+# LinkIndex = stories.HeaderLink.Index
+# LinkFof = stories.HeaderLink.Fof
 
-LinkUsers = stories.HeaderLink.Users
-LinkIndex = stories.HeaderLink.Index
-LinkFof = stories.HeaderLink.Fof
-
-CFX = prefixDom {
+CFX = cfxify {
   Home
   Users 
   Provider
@@ -42,18 +38,18 @@ export default ->
   , =>
 
     { c_Home } = CFX
-    c_Home
-      HeaderLink:
-        Users: LinkUsers
-        Index: LinkIndex
-        Fof: LinkFof
+    c_Home {}
+      # HeaderLink:
+      #   Users: LinkUsers
+      #   Index: LinkIndex
+      #   Fof: LinkFof
 
   .add 'Users'
   , =>
 
     { c_Users } = CFX
-    c_Users
-      HeaderLink:
-        Users: LinkUsers
-        Index: LinkIndex
-        Fof: LinkFof
+    c_Users {}
+      # HeaderLink:
+      #   Users: LinkUsers
+      #   Index: LinkIndex
+        # Fof: LinkFof

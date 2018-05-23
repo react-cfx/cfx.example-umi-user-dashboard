@@ -1,18 +1,21 @@
 {
   "name": "cfx.example-umi-user-dashboard.Umi",
   "version": "0.0.0",
+  "main": "dist/main.js",
   "scripts": {
   },
   "devDependencies": {
     "cfx.simple-build-tool": "^0.0.12",
-    "ddeyes": "^0.0.6",
-    "umi": "^1.0.5"
+    "ddeyes": "^0.2.8",
+    "umi": "^1.3.3"
   },
   "dependencies": {
-    "cfx.example-umi-user-dashboard.Sdk": "file:../Sdk",
-    "cfx.example-umi-user-dashboard.View": "file:../View",
+    "cfx.example-umi-user-dashboard.Sdk": "0.0.0",
+    "cfx.example-umi-user-dashboard.Page": "0.0.0",
+		"cfx.require-plugin-coffee": "^0.2.10",
+		"cfx.rollup-plugin-coffee2": "^0.2.10",
     "antd": "^3.3.0",
-    "cfx.dom": "^0.0.3",
-    "cfx.react-redux": "^0.0.4"
+    "cfx.react.dom": "^0.0.10",
+    "cfx.react-redux": "^0.0.5"
   }
 }
