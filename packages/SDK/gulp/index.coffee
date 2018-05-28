@@ -30,12 +30,12 @@ gulp.task 'buildEs', =>
       cleanup()
     ]
   , 'es'
-  .pipe rename 'main.es.js'
-  .pipe gulp.dest './dist'
+  .pipe rename 'index.js'
+  .pipe gulp.dest './dist/es'
 
 gulp.task 'buildCjs', =>
 
-  gulp.src './dist/main.es.js'
+  gulp.src './dist/es/index.js'
   .pipe rollup
     plugins: [
       babel()
@@ -43,7 +43,7 @@ gulp.task 'buildCjs', =>
       cleanup()
     ]
   , 'cjs'
-  .pipe rename 'main.js'
+  .pipe rename 'index.js'
   .pipe gulp.dest './dist'
 
 gulp.task 'build'

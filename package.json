@@ -1,7 +1,7 @@
 {
   "scripts": {
     "lernaclean": "lerna clean --yes",
-    "lernabootstrap": "lerna bootstrap",
+    "lernabootstrap": "lerna bootstrap --registry=https://registry.npm.taobao.org/ --loglevel=verbose",
     "rebootstrap": "npm run lernaclean; npm run lernabootstrap",
     "cleanall": "lerna run clean; lerna exec -- rm -rf ./dist ./yarn*; npm run lernaclean",
     "rebootall": "npm run cleanall; npm run lernabootstrap",
@@ -9,12 +9,9 @@
   },
   "devDependencies": {
     "autod": "^3.0.1",
-    "cfx.require-plugin-coffee": "^0.2.10",
-    "cfx.simple-build-tool": "^0.0.12",
-    "lerna": "^2.11.0"
+    "cfx.require-plugin-coffee": "^0.2.10"
   },
   "dependencies": {
-    "cfx.react-redux": "^0.0.5",
-    "lerna": "^2.11.0"
+    "lerna": "~2.11.0"
   }
 }

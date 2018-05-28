@@ -4,9 +4,10 @@ import cfxify from 'cfx.react.dom'
 import MainLayout, { Header } from '../../components/comps/MainLayout'
 import Link from './Link'
 
-import HomePage from '../../pages'
-
-import UsersPage from './Users'
+import {
+  Home as HomePage
+  Users as UsersPage
+} from '../../components/pages'
 
 CFX = cfxify {
   HomePage

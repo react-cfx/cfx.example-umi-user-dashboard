@@ -70,7 +70,7 @@ export default (Link) => ({
         href: 'https://github.com/umijs/umi'
         target: '_blank'
         rel: 'noopener noreferrer'
-      , 'dva'
+      , 'umi'
 
     c_MenuItem
       key: '/dva'

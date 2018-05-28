@@ -1,17 +1,18 @@
 export default
   write: true
   registry: 'https://registry.npm.taobao.org'
-  prefix: '^'
+  prefix: '~'
+  devprefix: '^'
   plugin: ''
   test: []
   dep: [
     'cfx.redux.redux'
     'cfx.redux.sagas'
     'cfx.rollup-plugin-coffee2'
-		'cfx.require-plugin-coffee'
-		'cfx.simple-build-tool'
+    'cfx.require-plugin-coffee'
+    'cfx.simple-build-tool'
     'cfx.service'
-		'del'
+    'del'
     'gulp'
     'gulp-better-rollup'
     'gulp-rename'

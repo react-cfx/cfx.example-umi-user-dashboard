@@ -7,15 +7,15 @@
   "devDependencies": {
     "cfx.simple-build-tool": "^0.0.12",
     "ddeyes": "^0.2.8",
-    "umi": "^1.3.3"
+    "umi": "^1.3.4"
   },
   "dependencies": {
+    "antd": "~3.5.4",
     "cfx.example-umi-user-dashboard.Sdk": "0.0.0",
-    "cfx.example-umi-user-dashboard.Page": "0.0.0",
-		"cfx.require-plugin-coffee": "^0.2.10",
-		"cfx.rollup-plugin-coffee2": "^0.2.10",
-    "antd": "^3.3.0",
-    "cfx.react.dom": "^0.0.10",
-    "cfx.react-redux": "^0.0.5"
+    "cfx.react-redux": "~0.0.5",
+    "cfx.react.dom": "~0.0.10",
+    "cfx.redux.redux": "~0.0.5",
+    "cfx.require-plugin-coffee": "~0.2.10",
+    "cfx.rollup-plugin-coffee2": "~0.2.10"
   }
 }

@@ -1,6 +1,8 @@
 export default
   write: true
-  prefix: '^'
+  registry: 'https://registry.npm.taobao.org'
+  prefix: '~'
+  devprefix: '^'
   plugin: ''
   test: []
   dep: [
