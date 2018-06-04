@@ -12,6 +12,7 @@
   "dependencies": {
     "antd": "~3.5.4",
     "cfx.example-umi-user-dashboard.Sdk": "0.0.0",
+    "cfx.example-umi-user-dashboard.Page": "0.0.0",
     "cfx.react-redux": "~0.0.5",
     "cfx.react.dom": "~0.0.10",
     "cfx.redux.redux": "~0.0.5",

@@ -28,7 +28,7 @@ class StoryUsers extends Component
       total: 0
       page: 0
 
-  componentWillMount: ->
+  UNSAFE_componentWillMount: ->
     @props.actions.fetch()
     @
 

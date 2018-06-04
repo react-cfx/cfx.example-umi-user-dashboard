@@ -1,9 +1,11 @@
 {
   "lerna": "2.11.0",
   "version": "0.0.0",
-  "npmClient": "yarn",
   "commands": {
     "bootstrap": {
+      "npmClient": "yarn",
+      "loglevel": "info",
+      "registry": "http://192.168.31.128:3030/",
       "ignore": [
       ]
     }

@@ -7,7 +7,7 @@ export default
   test: []
   keep: [
     'cfx.example-umi-user-dashboard.Sdk'
-    'cfx.example-umi-user-dashboard.View'
+    'cfx.example-umi-user-dashboard.Page'
   ]
   dep: [
     'cfx.require-plugin-coffee'

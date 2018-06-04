@@ -11,11 +11,11 @@ static:
 serve:
 	serve -p 8000 ./dist/
 
-umibuild: build
-	cp public/pages/document.html src/pages/document.ejs
+# umibuild: build
+# 	cp public/pages/document.html src/pages/document.ejs
 
-umirebuild: rebuild
-	cp public/pages/document.html src/pages/document.ejs
+# umirebuild: rebuild
+# 	cp public/pages/document.html src/pages/document.ejs
 
 dev:
 	umi dev
