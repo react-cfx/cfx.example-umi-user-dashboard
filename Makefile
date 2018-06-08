@@ -13,6 +13,34 @@ docker:
 		mooxe/node \
 		/bin/bash
 
+registry:
+	docker run \
+		--name ${pjName} \
+		--rm \
+		-ti \
+		--link cfx.registry \
+		-p 3080:80 \
+		-p 3088:8080 \
+		-p 3030:3000 \
+		-p 3000:8000 \
+		-v $$(pwd):/root/${pjName} \
+		mooxe/node \
+		/bin/bash
+
+verdaccio:
+	docker run \
+		--name ${pjName} \
+		--rm \
+		-ti \
+		--link verdaccio \
+		-p 3080:80 \
+		-p 3088:8080 \
+		-p 3030:3000 \
+		-p 3000:8000 \
+		-v $$(pwd):/root/${pjName} \
+		cfx/verdaccio \
+		/bin/bash
+
 in:
 	docker exec \
 		-ti \

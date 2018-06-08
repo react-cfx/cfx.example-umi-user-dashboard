@@ -5,7 +5,7 @@
     "bootstrap": {
       "npmClient": "yarn",
       "loglevel": "info",
-      "registry": "http://192.168.31.128:3030/",
+      "registry": "http://verdaccio:4873",
       "ignore": [
       ]
     }
